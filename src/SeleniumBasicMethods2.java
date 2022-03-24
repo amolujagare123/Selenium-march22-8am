@@ -11,10 +11,15 @@ public class SeleniumBasicMethods2 {
 
         driver.manage().window().maximize();
 
-        driver.get("http://gmail.com");
+        driver.get("http://scriptinglogic.com");
 
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getPageSource());
+
+       // driver.close(); // closes the current window only
+
+        driver.quit(); // closes all the windows opened by the driver
 
     }
 }
