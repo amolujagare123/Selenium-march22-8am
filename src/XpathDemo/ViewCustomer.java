@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AddCustomer {
+public class ViewCustomer {
 
     public static void main(String[] args) {
 
@@ -24,24 +24,10 @@ public class AddCustomer {
         WebElement btnLogin = driver.findElement(By.xpath("//input[@value='LOG IN']"));
         btnLogin.click();
 
-        //driver.findElement(By.xpath("//a[@href='add_customer.php']")).click();
-
         driver.findElement(By.xpath("//a[text()='Add Customer']")).click();
+        driver.findElement(By.xpath("//a[text()='View Customers']")).click();
 
-        WebElement txtName = driver.findElement(By.xpath("//*[@name='name']"));
-        txtName.sendKeys("Ashwini123");
-
-        WebElement txtAddress = driver.findElement(By.xpath("//textarea[@name='address']"));
-        txtAddress.sendKeys("xyz, pqr ,pune ,MH");
-
-        WebElement txtContact1 = driver.findElement(By.xpath("//input[@name='contact1']"));
-        txtContact1.sendKeys("98989898");
-
-        WebElement txtContact2 = driver.findElement(By.xpath("//input[@name='contact2']"));
-        txtContact2.sendKeys("19898989");
-
-        WebElement btnAdd = driver.findElement(By.xpath("//input[@value='Add']"));
-        btnAdd.click();
+        driver.findElement(By.xpath("//tr[td[text()='Sneha']]//input")).click();
 
     }
 }
