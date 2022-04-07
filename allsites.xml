@@ -1,0 +1,17 @@
+<suite name="All sites">
+
+    <test name="study sites">
+        <classes>
+            <class  name ="TestNGDemos.Sites.JobSites"/>
+            <class  name ="TestNGDemos.Sites.TutorialsSites"/>
+        </classes>
+    </test>
+
+    <test name = "Social sites">
+        <classes>
+            <class name="TestNGDemos.Sites.SocialSites"/>
+        </classes>
+
+    </test>
+
+</suite>
