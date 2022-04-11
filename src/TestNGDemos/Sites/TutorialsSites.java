@@ -3,6 +3,7 @@ package TestNGDemos.Sites;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -37,7 +38,9 @@ public class TutorialsSites {
     @Test
     public void tutorialpoints()
     {
-        driver.get("http://tutorialspoint.com");
+        driver.get("http://gmail.com");
+        Assert.assertEquals(driver.getCurrentUrl(),
+                "https://www.tutorialspoint.com/index.htm","this is not tutorials website");
     }
 
     @Test

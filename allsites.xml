@@ -1,5 +1,9 @@
 <suite name="All sites">
 
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>
+
     <test name="study sites">
         <classes>
             <class  name ="TestNGDemos.Sites.JobSites"/>
