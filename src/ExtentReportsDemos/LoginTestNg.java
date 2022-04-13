@@ -14,6 +14,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
+import static ExtentReportsDemos.utils.ForExtentReports.takingScreenshot;
+
 public class LoginTestNg {
 
     ExtentReports extent;
@@ -44,8 +48,7 @@ public class LoginTestNg {
 
 
     @Test
-    public void  loginTest1()
-    {
+    public void  loginTest1() throws IOException {
         ExtentTest test = extent.createTest("valid login Test");
 
         WebDriverManager.chromedriver().setup();
@@ -83,12 +86,12 @@ public class LoginTestNg {
         catch (AssertionError e)
         {
             test.fail(e.getMessage());
+            test.addScreenCaptureFromPath("./screenshots/"+takingScreenshot(driver));
         }
     }
 
     @Test
-    public void  loginTest2()
-    {
+    public void  loginTest2() throws IOException {
         ExtentTest test = extent.createTest("invalid login Test");
 
         WebDriverManager.chromedriver().setup();
@@ -126,13 +129,13 @@ public class LoginTestNg {
         catch (AssertionError e)
         {
             test.fail(e.getMessage());
+            test.addScreenCaptureFromPath("./screenshots/"+takingScreenshot(driver));
         }
 
     }
 
     @Test
-    public void  loginTest3()
-    {
+    public void  loginTest3() throws IOException {
         ExtentTest test = extent.createTest("blank login Test");
 
         WebDriverManager.chromedriver().setup();
@@ -160,7 +163,7 @@ public class LoginTestNg {
 
         test.info("login button is clicked");
 
-        String expected ="https://stock.scriptinglogic.net";
+        String expected ="https://stock.scriptinglogic.net1";
         String actual = driver.getCurrentUrl();
 
         try {
@@ -170,6 +173,7 @@ public class LoginTestNg {
         catch (AssertionError e)
         {
             test.fail(e.getMessage());
+            test.addScreenCaptureFromPath("./screenshots/"+takingScreenshot(driver));
         }
     }
 }
