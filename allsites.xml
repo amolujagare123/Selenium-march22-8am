@@ -1,13 +1,17 @@
 <suite name="All sites">
 
-    <listeners>
+   <!-- <listeners>
         <listener class-name="org.testng.reporters.EmailableReporter2" />
     </listeners>
 
-   <!-- <listeners>
+  <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>-->
+    <listeners>
+        <listener class-name="ExtentReportsDemos.utils.ExtentReportListener" />
+    </listeners>
+
 
     <test name="study sites">
         <classes>
