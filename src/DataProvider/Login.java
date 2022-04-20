@@ -22,7 +22,6 @@ public class Login {
         driver.manage().window().maximize();
         driver.get("https://stock.scriptinglogic.net/");
 
-
         WebElement txtUser = driver.findElement(By.cssSelector("#login-username"));
         txtUser.sendKeys(username);
 
